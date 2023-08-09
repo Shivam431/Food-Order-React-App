@@ -5,7 +5,7 @@
     background-color: #410579;
     color: white;
     padding: 0.75rem 3rem;
-    display: flex;
+    display:flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 25px;
