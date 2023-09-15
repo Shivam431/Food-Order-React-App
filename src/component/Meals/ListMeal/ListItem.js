@@ -1,19 +1,19 @@
 import { useContext } from "react";
 import ItemForm from "./ItemForm";
 import classes from "./ListItem.module.css";
-import CardContext from '../../../store/Cart-item';
+import CardContext from "../../../store/Cart-item";
 export default function ListItem(props) {
- const cartctx= useContext(CardContext)
+  const cartctx = useContext(CardContext);
   const price = `$${props.price}`;
 
-  const addToCartHandler =(enteredAmount)=>{
-cartctx.addItem({
-  id: props.id,
-  name: props.title ,
-  amount: enteredAmount,
-  price: props.price
-})
-  }
+  const addToCartHandler = (enteredAmount) => {
+    cartctx.addItem({
+      id: props.id,
+      name: props.title,
+      amount: enteredAmount,
+      price: props.price,
+    });
+  };
   return (
     <li className={classes.meal}>
       <div>
@@ -23,7 +23,7 @@ cartctx.addItem({
       </div>
 
       <div>
-        <ItemForm onAddToCart={addToCartHandler}/>
+        <ItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );
