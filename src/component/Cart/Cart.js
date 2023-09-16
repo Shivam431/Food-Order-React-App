@@ -45,7 +45,7 @@ export default function Cart(props) {
           <button
             className={classes.button}
             onClick={() => {
-              console.log("orderring!!!!");
+              // console.log("orderring!!!!");
               props.onCloseCart();
             }}
           >
